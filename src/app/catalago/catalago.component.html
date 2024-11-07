@@ -1,0 +1,83 @@
+<div class="container" >
+    <div id="inicio" class="mb-3">
+        <h1>Catalogo de libros</h1>
+        <button class="btn btn-sencondary shadow-lg" *ngIf="!librosVisibles" (click)="mostrar()">Mostrar Libros</button>
+        <button class="btn btn-sencondary shadow-lg" *ngIf="librosVisibles && v == false" (click)="ocultar()">Ocultar Libros</button>
+        <button class="btn btn-sencondary shadow-lg" (click)="publicado()">Libros Disponibles</button>
+        <button class="btn btn-sencondary shadow-lg" (click)="noPublicado()">Libros no Disponibles</button>
+    </div>
+    <h4>Total libros <br> = {{lib.length}}</h4>
+    
+    <div class="container-fluid">
+
+        <div *ngIf="ver == true" class="row">
+            <!--Empieza la primera card-->
+            <br>
+            <h4 id="noLib" *ngIf="noLibros == true">No hay libros para mostrar</h4>
+            <div *ngFor="let leb of lib" class="col-6 col-md-6 col-sm-6 col-lg-4 mb-4">
+                <div class="card" >
+                    <div id="card-header" class="card-header">
+                        <h3>{{leb.titulo}}</h3>
+                    </div>
+                    <div class="card-body">
+                        <a [routerLink]="['/lib',leb.id]">
+                          
+                            <img src="{{leb.img}}" class="img-fuid" alt="">                
+                        </a>
+                        <br>
+                        <h4>Genero: <br>{{leb.genero}}</h4>
+                        
+                        <button id="Elboton" class="btn btn-secondary shadow-lg rounded" [routerLink]="['/lib',leb.id]">Mas Infomación</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- fin del container fluid -->
+            
+            
+            
+      <!--
+  
+        
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Titulo</h1>
+                </div>
+                <div class="card-body">
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, at?</p>
+  
+                  </div>
+            </div>
+        </div>
+  
+     
+
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Titulo</h1>
+                </div>
+                <div class="card-body">
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, at?</p>
+                </div>
+            </div>
+        </div>
+        
+        
+         <div class="col-4">
+             <div class="card">
+                 <div class="card-header">
+                     <h1>Titulo</h1>
+                 </div>
+                 <div class="card-body">
+                     <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, at?</p>
+                 </div>
+             </div>
+         </div>
+        </div>    
+    </div>
+    <h1>{{fra.phrase}}</h1>
+    -->
+
+

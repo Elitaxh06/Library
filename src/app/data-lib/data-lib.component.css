@@ -1,0 +1,65 @@
+
+
+img{
+    width: 23em;
+    height: 33em;
+}
+
+ 
+#volver {
+    margin-left: 1em;
+    display: flex;
+    height: 3em;
+    width: 9em;
+    align-items: center;
+    justify-content: center;
+    background-color: #bba7a74b;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    color: black;
+    cursor: pointer;
+    border: solid 1px #000;
+    border: none;
+    background: rgba(177, 177, 177, 0.562);
+}
+
+#volver > svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.5s ease-in;
+}
+
+#volver:hover > svg {
+    font-size: 1.2em;
+    transform: translateX(-7px);
+}
+
+#volver:hover {
+    box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+    transform: translateY(-2px);
+}
+
+p{
+    font-size: 1.5em;
+}
+
+details p  {
+    font-size: 1.1em;
+}
+
+summary{
+    font-size: 1.2em;
+}
+
+#des {
+    margin-top: .8em;
+}
+
+button{
+    margin-top: 1.3em;
+    background-color: cornsilk;
+    width: 6.6em;
+    height: 2.5em;
+}
